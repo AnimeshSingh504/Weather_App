@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather+Sans:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet" />
+    <link rel="shortcut icon" href="./assets/weather-app.png" type="image/x-icon">
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <div class="wrapper">
+        <!-- heading -->
+        <h1 class="weather-header">weather app</h1>
+        <!-- two tabs -->
+        <div class="tabs">
+            <!-- for my current location weather -->
+            <div my-weather-tab class="tab">your weather</div>
+            <!-- for any other city weather -->
+            <div city-weather-tab class="tab">search weather</div>
+        </div>
+
+        <!-- 1st display (Grant Access for Weather) -->
+        <div class="sub-class access-bar" search-tool>
+            <img src="./assets/location.png" height="80" width="80" class="location_img">
+            <h1 class="desc">grant location access</h1>
+            <p>Allow Access to get weather Information</p>
+            <button class="access-button" grant-access-button>
+                grant access
+            </button>
+        </div>
+
+        <!-- search bar to find the cities weather -->
+        <form class="sub-container search-bar">
+            <input placeholder="Search for City..." input-bar>
+            <button class="search-btn" type="submit">
+                <img src="./assets/search.png"  height="20" width="20" loading="lazy">
+            </button>
+        </form>
+
+        <!-- loading gif-->
+        <div class="loading-class loader" fetching-data>
+            <img src="./assets/loading.gif" alt="" height="100" width="100">
+            <p>Loading</p>
+        </div>
+
+        <!-- for the display of weather of current location or any city searched -->
+        <div class="display-container display-weather">
+            <!-- name and flag -->
+            <div class="city-flag">
+                <div city-name></div>
+                <img country-flag>
+            </div>
+            <!-- type of condition -->
+            <div class="weather-type" condition-type></div>
+            <!-- image of type of condition -->
+            <img class="weather-img" condition-type-img>
+            <!-- temperature display -->
+            <div temp-display></div>
+            <!-- windspeed, humidity and clouds details -->
+            <div class="adon-details">
+                <div class="box">
+                    <img src="./assets/wind.png" length="60" width="60">
+                    <p>windspeed</p>
+                    <p windspeed-data></p>
+                </div>
+                <div class="box">
+                    <img src="./assets/humidity.png" length="60" width="60">
+                    <p>humidity</p>
+                    <p humidity-data></p>
+                </div>
+                <div class="box">
+                    <img src="./assets/cloud.png" length="60" width="60">
+                    <p>clouds</p>
+                    <p clouds-data></p>
+                </div>
+            </div>
+        </div>
+        <div class="bad-response bad-status" show-bad-status>
+            <img src="./assets/not-found.png" alt="" height="100" width="100">
+            <p>Loading Error</p>
+        </div>
+    </div>
+    <script src="index.js"></script>
+</body>
+</html>

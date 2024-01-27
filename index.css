@@ -1,0 +1,274 @@
+*,*::after,*::before{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Merriweather Sans', sans-serif;
+}
+
+:root {
+    --colorDark1: #112D4E;
+    --colorDark2: #3F72AF;
+    --colorLight1: #DBE2EF;
+    --colorLight2: #F9F7F7;
+}
+
+.wrapper{
+    height: 100vh;
+    width: 100vw;
+    background:linear-gradient(160deg, #112d4e 0%, #3f72af 100%);
+    color: var(--colorLight2);
+}
+
+.weather-header{
+    text-transform: uppercase;
+    text-align: center;
+    padding: 20px;
+}
+
+.tabs{
+    width: 90%;
+    max-width: 550px;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    margin-top: 2rem;
+}
+
+.tab{
+    text-transform: capitalize;
+    padding: 5px 8px;
+    letter-spacing: 1.75px;
+    font-size: 0.875rem;
+    cursor: pointer;
+}
+
+.tab.active{
+    background-color: rgba(219, 226, 239, 0.5);
+    border-radius: 4px;
+}
+
+.sub-class{
+    margin-block: 4rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.access-button{
+    all: unset;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    border-radius: 5px;
+    background-color: var(--colorDark2);
+    cursor: pointer;
+    padding: 10px 30px;
+    margin-bottom: 10px;
+}
+
+.access-bar img{
+    margin-bottom: 2rem;
+}
+
+.desc{
+    font-size: 1.75rem;
+    font-weight: 600;
+    text-transform: capitalize;
+}
+
+.access-bar p:first-of-type{
+    font-size: 0.85rem;
+    font-weight: 500;
+    margin-top: 0.75rem;
+    margin-bottom: 1.75rem;
+    letter-spacing: 0.75px; 
+}
+
+.access-bar{
+    display: none;
+}
+
+.access-bar.active{
+    display: flex;
+}
+
+.sub-container{
+    width: 90%;
+    max-width: 550px;
+    margin-block: 4rem;
+    margin-top: 4rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    gap: 0 10px;
+    margin-bottom: 3rem;
+    margin-top: 2rem;
+}
+
+.sub-container input{
+    all: unset;
+    width: calc(100% - 80px);
+    height: 40px;
+    padding: 0 20px;
+    background-color: rgba(219, 226, 239, 0.5);
+    border-radius: 10px;
+}
+
+.sub-container input::placeholder{
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.sub-container input:focus{
+    outline: 3px solid rgba(255, 255, 255, 0.7);
+}
+
+.search-btn{
+    padding: unset;
+    /* all: unset; */
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100%;
+    margin-bottom: 1px;
+    border: none;
+    background-color: var(--colorDark2);
+    cursor: pointer;
+}
+
+.search-bar{
+    display: none;
+}
+
+.search-bar.active{
+    display: flex;
+}
+
+.loading-class{
+    margin-top: 4rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.loading-class p{
+    text-transform: uppercase;
+}
+
+.loader{
+    display: none;
+}
+
+.loader.active{
+    display: flex;
+}
+
+.display-container{
+    width: 90%;
+    max-width: 550px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    margin-top: 2rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.city-flag{
+    display: flex;
+    gap: 0 0.5rem;
+    margin-bottom: 1rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.city-flag div{
+    font-size: 2rem;
+    font-weight: 200;
+}
+
+.city-flag img{
+    width: 30px;
+    height: 25px;
+}
+
+.weather-type{
+    font-size: 2rem;
+}
+
+.weather-img{
+    height: 100px;
+    height: 100px;
+    
+}
+
+.display-container div[temp-display]{
+    font-size: 2.75rem;
+    font-weight: 700;
+}
+
+.adon-details{
+    display: flex;
+    gap: 10px 20px;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2rem;
+    width: 100%;
+}
+
+.box{
+    width: 30%;
+    max-width: 200px;
+    background-color: rgba(219, 226, 239, 0.5);
+    border-radius: 5px;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5px 0;
+}
+
+.box img{
+    height: 50px;
+    width: 50px;
+}
+
+.box p:first-of-type{
+    font-size: 1.15rem;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.box p:last-of-type{
+    font-size: 1rem;
+    font-weight: 200;
+}
+
+.display-weather{
+    display: none;
+}
+
+.display-weather.active{
+    display: flex;
+}
+
+.bad-response{
+    margin-top: 4rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.bad-status{
+    display: none;
+}
+
+.bad-status.active{
+    display: flex;
+}
+
+
